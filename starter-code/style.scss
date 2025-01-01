@@ -1,0 +1,197 @@
+$dark_gray: hsl(240, 10%, 14%);
+$light_green: hsl(134, 100%, 80%);
+$very_dark_gray: hsl(240, 10%, 11%);
+$very_very_dark_gray: hsl(240, 20%, 5%);
+
+@mixin fFlexbox($height, $width, $direction){
+    flex-direction: $direction;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: $width;
+    height: $height;
+}
+
+@font-face {
+  font-family: 'my_font';
+  src: url('/starter-code/assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    height: fit-content;
+    width: fit-content;
+    font-family: 'my-font';
+    background: rgb(9,8,13);
+    background: linear-gradient(
+        0deg, 
+        rgb(15, 14, 22) 0%, 
+        rgba(24,21,33,1) 90%, 
+        rgb(28, 25, 39) 100%
+        );
+    font-weight: 300;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  .container{
+    @include fFlexbox(100vh, 100vw, column);
+    min-height: fit-content;
+    min-width: fit-content;
+    row-gap: 2rem;
+    font-family: 'my_font';
+    .title{
+      @include fFlexbox(fit-content, 25.9rem, column);
+      color: rgba(221, 221, 221, 0.363);
+      font-size: 0.7rem;
+    }
+    .password{
+      @include fFlexbox(5rem, 25.9rem, row);
+      background-color: $dark_gray;
+      #your_password{
+        width: 90%;
+        color: rgb(99, 99, 99);
+        font-family: 'my_font';
+        font-size: 1.6rem;
+        text-align: left;
+        padding-left: 1rem;
+      }
+      #coppy{
+        background: none;
+        all: unset;
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+    main{
+      @include fFlexbox(29rem, 25.9rem, column);
+      background-color: $dark_gray;
+      row-gap: 1rem;
+      .password_length{
+        @include fFlexbox(fit-content, 100%, row);
+        column-gap: 11rem;
+        font-family: 'my_font';
+        color: rgb(221, 221, 221);
+      }
+      #character_amount{
+        color: $light_green;
+        font-size: 1.5rem;
+      }
+      .slider{
+        width: 100%;
+        input{
+          -webkit-appearance: none;
+          -moz-appearance: none; 
+          width: 84.5%; 
+          height: 0.5rem;
+          background: linear-gradient(to right, hsl(134, 100%, 80%) 50%, hsl(240, 10%, 11%) 50%);
+          cursor: pointer;
+        }
+        input::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 1.3rem;
+          height: 1.3rem;
+          background: rgb(221, 221, 221);
+          cursor: pointer;
+          border-radius: 50%;
+        }
+        input::-moz-range-thumb {
+          width: 1.3rem;
+          height: 1.3rem;
+          background: rgb(221, 221, 221);
+          cursor: pointer;
+          border-radius: 50%;
+        }
+      }
+      .check_boxes{
+        @include fFlexbox(fit-content, 84.5%, column);
+        row-gap: 0.7rem;
+        align-items: flex-start;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        .check_box{
+          @include fFlexbox(fit-content, fit-content, row);
+          column-gap: 1rem;
+          input{
+            appearance: none;
+            cursor: pointer;
+            width: 1rem;
+            height: 1rem;
+            color: rgb(221, 221, 221);
+            border: solid 0.12rem rgb(221, 221, 221);
+          }
+          input:checked{
+            background-image: url('/starter-code/assets/images/icon-check.svg');
+            background-color: $light_green;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border: solid 0.12rem $light_green;
+          }
+          label{
+            color: rgb(221, 221, 221);
+            font-family: 'my_font';
+          }
+        }
+      }
+      #password_strength{
+        @include fFlexbox(4rem, 84.5%, row);
+        background-color: $very_dark_gray;
+        column-gap: 3.52rem;
+        p{
+          color: rgba(221, 221, 221, 0.363);
+        }
+        .strength{
+          @include fFlexbox(fit-content, fit-content, row);
+          color: rgb(221, 221, 221);
+          column-gap: 0.5rem;
+          text-transform: uppercase;
+          p{
+            color: rgb(221, 221, 221);
+            font-size: 1.4rem;
+          }
+          .strength_bar{
+            @include fFlexbox(fit-content, fit-content, row);
+            column-gap: 0.5rem;
+            .bar1, .bar2, .bar3, .bar4{
+              width: 0.7rem;
+              height: 1.7rem;
+              //background-color: rgb(231, 88, 78);
+              border: solid 0.12rem rgb(221, 221, 221);
+            }
+            .bar1{
+              background-color: rgb(57, 236, 41);
+            }
+          }
+        }
+      }
+      #button_generate{
+        @include fFlexbox(4rem, 84.5%, row);
+        background-color: $light_green;
+        column-gap: 1rem;
+        cursor: pointer;
+        .generate{
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="scripts" href="/starter-code/script.js">
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Password Generator</h1>
+    </div>
+    <div class="password">
+      <div id="your_password">P4$5WOrD!</div>
+      <button id="coppy"><img src="/starter-code/assets/images/icon-copy.svg"></button>
+    </div>
+    <main>
+      <div class="password_length">
+        <p>Characer Length</p>
+        <p id="character_amount">10</p>
+      </div>
+      <div class="slider">
+        <input type="range" min="1" max="20" value="10" id="my_range">
+      </div>
+      <div class="check_boxes">
+        <div class="check_box">
+          <input type="checkbox" id="uppercase" unchecked>
+          <label for="uppercase">Include Uppercase Letters</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="lowercase" unchecked>
+          <label for="lowercase">Include Lowercase Letters</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="numbers" unchecked>
+          <label for="numbers">Include Numbers</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="symbols" unchecked>
+          <label for="symbols">Include Symbols</label>
+        </div>
+      </div>
+      <div id="password_strength">
+        <p>STRENGTH</p>
+        <div class="strength">
+          <p id="strength">very Weak</p>
+          <div class="strength_bar">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+          </div>
+        </div>
+      </div>
+      <div id="button_generate">
+        <div class="generate">Generate</div>
+        <img src="/starter-code/assets/images/icon-arrow-right.svg">
+      </div>
+    </main>
+  </div>
+  <script src="/starter-code/script.js" defer></script>
+</body>
+</html>

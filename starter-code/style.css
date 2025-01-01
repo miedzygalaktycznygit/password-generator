@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "my_font";
+  src: url("/starter-code/assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "my-font";
+  background: rgb(9, 8, 13);
+  background: linear-gradient(0deg, rgb(15, 14, 22) 0%, rgb(24, 21, 33) 90%, rgb(28, 25, 39) 100%);
+  font-weight: 300;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  row-gap: 2rem;
+  font-family: "my_font";
+}
+.container .title {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 25.9rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: rgba(221, 221, 221, 0.363);
+  font-size: 0.7rem;
+}
+.container .password {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 25.9rem;
+  height: 5rem;
+  background-color: hsl(240, 10%, 14%);
+}
+.container .password #your_password {
+  width: 90%;
+  color: rgb(99, 99, 99);
+  font-family: "my_font";
+  font-size: 1.6rem;
+  text-align: left;
+  padding-left: 1rem;
+}
+.container .password #coppy {
+  background: none;
+  all: unset;
+  padding: 1rem;
+  cursor: pointer;
+}
+.container main {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 25.9rem;
+  height: 29rem;
+  background-color: hsl(240, 10%, 14%);
+  row-gap: 1rem;
+}
+.container main .password_length {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  -moz-column-gap: 11rem;
+       column-gap: 11rem;
+  font-family: "my_font";
+  color: rgb(221, 221, 221);
+}
+.container main #character_amount {
+  color: hsl(134, 100%, 80%);
+  font-size: 1.5rem;
+}
+.container main .slider {
+  width: 100%;
+}
+.container main .slider input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 84.5%;
+  height: 0.5rem;
+  background: linear-gradient(to right, hsl(134, 100%, 80%) 50%, hsl(240, 10%, 11%) 50%);
+  cursor: pointer;
+}
+.container main .slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: rgb(221, 221, 221);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container main .slider input::-moz-range-thumb {
+  width: 1.3rem;
+  height: 1.3rem;
+  background: rgb(221, 221, 221);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container main .check_boxes {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 84.5%;
+  height: -moz-fit-content;
+  height: fit-content;
+  row-gap: 0.7rem;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.container main .check_boxes .check_box {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.container main .check_boxes .check_box input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  color: rgb(221, 221, 221);
+  border: solid 0.12rem rgb(221, 221, 221);
+}
+.container main .check_boxes .check_box input:checked {
+  background-image: url("/starter-code/assets/images/icon-check.svg");
+  background-color: hsl(134, 100%, 80%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: solid 0.12rem hsl(134, 100%, 80%);
+}
+.container main .check_boxes .check_box label {
+  color: rgb(221, 221, 221);
+  font-family: "my_font";
+}
+.container main #password_strength {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 84.5%;
+  height: 4rem;
+  background-color: hsl(240, 10%, 11%);
+  -moz-column-gap: 3.52rem;
+       column-gap: 3.52rem;
+}
+.container main #password_strength p {
+  color: rgba(221, 221, 221, 0.363);
+}
+.container main #password_strength .strength {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: rgb(221, 221, 221);
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  text-transform: uppercase;
+}
+.container main #password_strength .strength p {
+  color: rgb(221, 221, 221);
+  font-size: 1.4rem;
+}
+.container main #password_strength .strength .strength_bar {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.container main #password_strength .strength .strength_bar .bar1, .container main #password_strength .strength .strength_bar .bar2, .container main #password_strength .strength .strength_bar .bar3, .container main #password_strength .strength .strength_bar .bar4 {
+  width: 0.7rem;
+  height: 1.7rem;
+  border: solid 0.12rem rgb(221, 221, 221);
+}
+.container main #password_strength .strength .strength_bar .bar1 {
+  background-color: rgb(57, 236, 41);
+}
+.container main #button_generate {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 84.5%;
+  height: 4rem;
+  background-color: hsl(134, 100%, 80%);
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  cursor: pointer;
+}
+.container main #button_generate .generate {
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */
