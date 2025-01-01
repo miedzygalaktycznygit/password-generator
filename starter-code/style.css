@@ -1,6 +1,6 @@
 @font-face {
   font-family: "my_font";
-  src: url("/starter-code/assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+  src: url("/assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
 }
 *, *::before, *::after {
   box-sizing: border-box;
