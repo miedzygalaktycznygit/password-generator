@@ -181,7 +181,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border: solid 0.12rem rgb(221, 221, 221);
 }
 .container main .check_boxes .check_box input:checked {
-  background-image: url("/starter-code/assets/images/icon-check.svg");
+  background-image: url("/assets/images/icon-check.svg");
   background-color: hsl(134, 100%, 80%);
   background-repeat: no-repeat;
   background-position: center;
